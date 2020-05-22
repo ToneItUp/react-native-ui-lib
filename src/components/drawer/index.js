@@ -83,7 +83,23 @@ class NewDrawer extends PureBaseComponent {
     /**
      * Callback for just before left item full swipe
      */
-    onWillFullSwipeLeft: PropTypes.func
+    onWillFullSwipeLeft: PropTypes.func,
+    /**
+     * Whether to allow a full right swipe
+     */
+    fullSwipeRight: PropTypes.bool,
+    /**
+     * Threshold for a left full swipe (0-1)
+     */
+    fullRightThreshold: PropTypes.number,
+    /**
+     * Callback for left item full swipe
+     */
+    onFullSwipeRight: PropTypes.func,
+    /**
+     * Callback for just before left item full swipe
+     */
+    onWillFullSwipeRight: PropTypes.func
   };
 
   static defaultProps = {

@@ -21,7 +21,8 @@ class DrawerScreen extends Component {
       hideItem: false,
       showRightItems: true,
       showLeftItem: true,
-      fullSwipeLeft: true
+      fullSwipeLeft: true,
+      fullSwipeRight: true
     };
   }
 
@@ -33,7 +34,7 @@ class DrawerScreen extends Component {
     }
   }
 
-  onWillFullSwipeLeft = () => {
+  onWillFullSwipe = () => {
     
     // TODO: consider including this functionality as part of the drawer component
     setTimeout(() => {
@@ -72,6 +73,7 @@ class DrawerScreen extends Component {
       showRightItems,
       showLeftItem,
       fullSwipeLeft,
+      fullSwipeRight,
       itemsTintColor,
       bounciness,
       itemsIconSize,
@@ -83,7 +85,9 @@ class DrawerScreen extends Component {
       itemsIconSize,
       bounciness,
       fullSwipeLeft,
-      onWillFullSwipeLeft: this.onWillFullSwipeLeft
+      fullSwipeRight,
+      onWillFullSwipeLeft: this.onWillFullSwipe,
+      onWillFullSwipeRight: this.onWillFullSwipe
     };
     if (showRightItems) {
       drawerProps.rightItems = [ITEMS.read, ITEMS.archive];
