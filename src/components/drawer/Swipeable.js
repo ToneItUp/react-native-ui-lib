@@ -206,11 +206,14 @@ export default class Swipeable extends Component<PropType, StateType> {
         toValue = rowWidth;
       } else if (fullSwipeRight && translationX < rowWidth * fullRightThreshold) {
         toValue = -rowWidth;
-      } else if (translationX > leftThreshold) {
-        toValue = leftWidth;
-      } else if (translationX < -rightThreshold) {
-        toValue = -rightWidth;
       }
+      // if return to button visible state is wanted uncomment the following
+      //
+      // else if (translationX > leftThreshold) {
+      //   toValue = leftWidth;
+      // } else if (translationX < -rightThreshold) {
+      //   toValue = -rightWidth;
+      // }
     } else if (this.rowState === 1) {
       // swiped to left
       if (fullSwipeLeft && translationX > -leftThreshold + -fullLeftThreshold) {

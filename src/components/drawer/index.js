@@ -261,9 +261,9 @@ class NewDrawer extends PureBaseComponent {
             style={[
               styles.actionIcon,
               {
-                width: itemsIconSize,
-                height: itemsIconSize,
-                tintColor: itemsTintColor,
+                width: item.iconSize || itemsIconSize,
+                height: item.iconSize || itemsIconSize,
+                tintColor: item.tintColor,
                 opacity,
                 transform: [{scale}]
               }
@@ -275,7 +275,7 @@ class NewDrawer extends PureBaseComponent {
             style={[
               styles.actionText,
               {
-                color: itemsTintColor,
+                color: item.textColor || itemsTintColor,
                 opacity,
                 transform: [{scale}]
               },
